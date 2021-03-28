@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <tileset firstgid="1" source="../Kenny.tsx"/>
+ <object gid="60" width="128" height="128">
+  <properties>
+   <property name="boundary_bottom" type="float" value="150"/>
+   <property name="boundary_top" type="float" value="580"/>
+   <property name="change_y" type="float" value="1"/>
+  </properties>
+ </object>
+</template>

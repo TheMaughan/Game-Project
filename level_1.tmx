@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#000000" nextlayerid="10" nextobjectid="13">
+ <tileset firstgid="1" source="Kenny.tsx"/>
+ <tileset firstgid="146" name="Checkpoint" tilewidth="128" tileheight="128" tilecount="9" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="128" height="128" source="images/items/flagGreen_down.png"/>
+  </tile>
+  <tile id="1">
+   <image width="128" height="128" source="images/items/flagGreen1.png"/>
+  </tile>
+  <tile id="2">
+   <image width="128" height="128" source="images/items/flagGreen2.png"/>
+   <animation>
+    <frame tileid="1" duration="1000"/>
+    <frame tileid="2" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="3">
+   <image width="128" height="128" source="images/items/flagRed_down.png"/>
+  </tile>
+  <tile id="4">
+   <image width="128" height="128" source="images/items/flagRed1.png"/>
+   <animation>
+    <frame tileid="5" duration="1000"/>
+    <frame tileid="4" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="5">
+   <image width="128" height="128" source="images/items/flagRed2.png"/>
+  </tile>
+  <tile id="6">
+   <image width="128" height="128" source="images/items/flagYellow_down.png"/>
+  </tile>
+  <tile id="7">
+   <image width="128" height="128" source="images/items/flagYellow1.png"/>
+   <animation>
+    <frame tileid="7" duration="1000"/>
+    <frame tileid="8" duration="1000"/>
+   </animation>
+  </tile>
+  <tile id="8">
+   <image width="128" height="128" source="images/items/flagYellow2.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="155" name="Coin" tilewidth="128" tileheight="128" tilecount="3" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <properties>
+    <property name="Points" type="int" value="1"/>
+   </properties>
+   <image width="128" height="128" source="images/items/coinBronze.png"/>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Points" type="int" value="100"/>
+   </properties>
+   <image width="128" height="128" source="images/items/coinGold.png"/>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="Points" type="int" value="10"/>
+   </properties>
+   <image width="128" height="128" source="images/items/coinSilver.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="158" name="plant_1" tilewidth="512" tileheight="512" tilecount="30" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00000.png"/>
+   <animation>
+    <frame tileid="0" duration="100"/>
+    <frame tileid="1" duration="100"/>
+    <frame tileid="2" duration="100"/>
+    <frame tileid="3" duration="100"/>
+    <frame tileid="4" duration="100"/>
+    <frame tileid="5" duration="100"/>
+    <frame tileid="6" duration="100"/>
+    <frame tileid="7" duration="100"/>
+    <frame tileid="8" duration="100"/>
+    <frame tileid="9" duration="100"/>
+    <frame tileid="10" duration="100"/>
+    <frame tileid="11" duration="100"/>
+    <frame tileid="12" duration="100"/>
+    <frame tileid="13" duration="100"/>
+    <frame tileid="14" duration="100"/>
+    <frame tileid="15" duration="100"/>
+    <frame tileid="17" duration="100"/>
+    <frame tileid="18" duration="100"/>
+    <frame tileid="19" duration="100"/>
+    <frame tileid="20" duration="100"/>
+    <frame tileid="21" duration="100"/>
+    <frame tileid="22" duration="100"/>
+    <frame tileid="23" duration="100"/>
+    <frame tileid="24" duration="100"/>
+    <frame tileid="25" duration="100"/>
+    <frame tileid="26" duration="100"/>
+    <frame tileid="27" duration="100"/>
+    <frame tileid="28" duration="100"/>
+    <frame tileid="29" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="1">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00001.png"/>
+  </tile>
+  <tile id="2">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00002.png"/>
+  </tile>
+  <tile id="3">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00003.png"/>
+  </tile>
+  <tile id="4">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00004.png"/>
+  </tile>
+  <tile id="5">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00005.png"/>
+  </tile>
+  <tile id="6">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00006.png"/>
+  </tile>
+  <tile id="7">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00007.png"/>
+  </tile>
+  <tile id="8">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00008.png"/>
+  </tile>
+  <tile id="9">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00009.png"/>
+  </tile>
+  <tile id="10">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00010.png"/>
+  </tile>
+  <tile id="11">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00011.png"/>
+  </tile>
+  <tile id="12">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00012.png"/>
+  </tile>
+  <tile id="13">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00013.png"/>
+  </tile>
+  <tile id="14">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00014.png"/>
+  </tile>
+  <tile id="15">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00015.png"/>
+  </tile>
+  <tile id="16">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00016.png"/>
+  </tile>
+  <tile id="17">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00017.png"/>
+  </tile>
+  <tile id="18">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00018.png"/>
+  </tile>
+  <tile id="19">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00019.png"/>
+  </tile>
+  <tile id="20">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00020.png"/>
+  </tile>
+  <tile id="21">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00021.png"/>
+  </tile>
+  <tile id="22">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00022.png"/>
+  </tile>
+  <tile id="23">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00023.png"/>
+  </tile>
+  <tile id="24">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00024.png"/>
+  </tile>
+  <tile id="25">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00025.png"/>
+  </tile>
+  <tile id="26">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00026.png"/>
+  </tile>
+  <tile id="27">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00027.png"/>
+  </tile>
+  <tile id="28">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00028.png"/>
+  </tile>
+  <tile id="29">
+   <image width="512" height="512" source="Map/Map/Plant Animations/Plant Wind 1/Plant Wind 1_00029.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="188" source="../Team-Projects/Sprites/1bit-monochrome_tilemap_transparent.tsx"/>
+ <layer id="1" name="Background" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwSgYBaNgFBACfmTo8ae6K4YmIDXsrGniilEwCgiDeQwMDRVAmhCmFQAAsFIGfQ==
+  </data>
+ </layer>
+ <layer id="4" name="Coins" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztlV0KACEIhL3/Fdzuui+9bNhmJjmRH0RQUDPlD1FyG4+wxttV6PHShuxRQ6t/h59SRwStPyluZ885NQZO1Y2A59tF5ULyJTIfEHMRUZME079WqVYXYQ+d2TrR86bpXTyYV7D2XK/7Ezsrf9fDM7as3NSDXzjwFxM=
+  </data>
+ </layer>
+ <layer id="5" name="Platforms" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztln0LgjAQh++DFZiUi16+UARa2h99627I4Bxb286zGeyBBxR03o+dpwCFQqHA5wjQqVF9POGQo6BI5tS2Qy8OrwJ1rZETWpPzBlXMtb71y5LoDHuhtTZC66RiMmwzPV8CmmFujjXsg0SOX3OGcV7ZGf4thzS5+ikHuod1D9SB6+7o22O7ZIERpM7Dm0dDjw7oy3O/+Wcw749LFSH97nHmYSgHJZSJwp0D3HmYkiMFWodvn1xy56Fd/wOgsnM8rfOYffkAyXcyGg==
+  </data>
+ </layer>
+ <objectgroup id="8" name="Moving Platforms">
+  <object id="9" gid="60" x="4460" y="2554" width="128" height="128">
+   <properties>
+    <property name="boundary_bottom" type="float" value="0"/>
+    <property name="boundary_top" type="float" value="280"/>
+    <property name="change_y" type="float" value="1"/>
+   </properties>
+  </object>
+  <object id="11" gid="130" x="2690.06" y="2052" width="261.333" height="128">
+   <properties>
+    <property name="boundary_left" type="float" value="1300"/>
+    <property name="boundary_right" type="float" value="1700"/>
+    <property name="change_x" type="float" value="1"/>
+   </properties>
+  </object>
+  <object id="12" gid="130" x="3088" y="2048" width="128" height="128">
+   <properties>
+    <property name="boundary_bottom" type="float" value="50"/>
+    <property name="boundary_top" type="float" value="350"/>
+    <property name="change_y" type="float" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="9" name="Ladders" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztz0ENACAMBMFaAv/isMCjpBcyo2C3CgDu7OmAJms6oImPLD6y+Mjyywe8dgDyjgG7
+  </data>
+ </layer>
+ <layer id="7" name="Don't Touch" width="50" height="20" opacity="0.39">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQC1QwcDwYKDdQAoAuvcAOh+IHQbGNaNgFIyCUTAKRgFpYCIRGBcYTHV2PxEYFyDVH6B6Hr3+pxagpz9oCQbSHwAMAR//
+  </data>
+ </layer>
+ <layer id="3" name="Foreground" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDDTwG2gH0AlYI7FJ9bMsNR1CR5CExJ4CxDIUmEWrdAKMFwcaGT0KBjEAxvuBQeCGBwPthlFAGbAmrGTYgRQC8slI7JlQmhrhNFjrQXx+Q64DYXUYqB6chqYOV/3mT66jKAQDZe8oIAxGQpkDAFZTCZ0=
+  </data>
+ </layer>
+</map>

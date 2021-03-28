@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#f3e8a4" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="Kenny.tsx"/>
+ <layer id="1" name="Platforms" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJy9lNENgDAIRPl2im7QDdx/LONHk8sFDoqml/DhAX3YaoeZjUOR6QSDWZ15Xs0gdqUYUS7i3ZS7PjCYtytksMe5Lsdj/CHcw8Xoni+vt56HCK/XWwt97lfrI2M6ngUe+9V3wNrqHnYYJvwuIzv36Dzw+0GeimzWrCZieFLfUCT+J7J6rJnkVXoUozqLupuz3uos1Rzfz+oeUHUq9wBbOyWp
+  </data>
+ </layer>
+</map>

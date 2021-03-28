@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" name="sky" tilewidth="32" tileheight="32" tilecount="27" columns="3">
+  <image source="Map/Backgrounds/sky.png" width="112" height="304"/>
+ </tileset>
+ <tileset firstgid="28" name="clouds" tilewidth="32" tileheight="32" tilecount="119" columns="17">
+  <image source="Map/Backgrounds/clouds.png" width="544" height="236"/>
+ </tileset>
+ <tileset firstgid="147" name="sea" tilewidth="32" tileheight="32" tilecount="9" columns="3">
+  <image source="Map/Backgrounds/sea.png" width="112" height="96"/>
+ </tileset>
+ <tileset firstgid="156" name="far-grounds" tilewidth="32" tileheight="32" tilecount="57" columns="19">
+  <image source="Map/Backgrounds/far-grounds.png" width="616" height="110"/>
+ </tileset>
+ <layer id="1" name="Background" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztktkKwjAQRVP3fd/9bLVq+7OeF0FiMplAQQZ8OHCbScqdmVs451rQhsKw7kAXesZ1HwYwNK5HMIaJcT2FGcyN6wUsYWVcr2EDW+N6B3s4GNdHOMHZuL7AFW7GdQl3eBjXT6igNq5/nYd/rr5z9bknf2+h7zpSazozobP3ue875C9Uj91vog/NvCpF3dc5s0m9k7ynZhhD8ifN3vcS8xO7o919Krf+P1J9SLuSMin1oZmzZr+xHrX95rzN8azNTcrLC+1FYGg=
+  </data>
+ </layer>
+ <layer id="3" name="Platforms" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20MH6AAAACAtwEPoAAB
+  </data>
+ </layer>
+ <layer id="4" name="Coins" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20MH6AAAACAtwEPoAAB
+  </data>
+ </layer>
+ <layer id="5" name="Don't Touch" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20MH6AAAACAtwEPoAAB
+  </data>
+ </layer>
+ <layer id="2" name="Foreground" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztz1lTjgEYx+H3g5RkibJvaZM9ZcmuFBVC2akoW0J2Usci+xIRyb5viRB9INeh03emGc/B85u5Tv/33JFIWJCKIZYBxDGQeAYxmCEMJYFhDCeRJEYwMiAboxjNGMYyjvFMYCKTSGYyKaSSRjoZTAnIRiZTmcZ0ZjCTWcwmizlkk8Nc5jGfBeQGZGMhi1jMEpayjOWsII98VlJAIatYTRHFAdkoYQ1rWUcp69nARsooZxOb2cJWtrGdHQHZ2MkuKqikit3soZoa9rKP/RzgILUcoi4gG4c5wlHqOcZxTnCSU5zmDGc5RwPnaaQpIBsXaOYil2jhMle4yjWuc4Ob3OI2d2jlLvdoi0RXf9+9zwPaecgjOnhMJ094yjOe84KXvOI1b3jLuyj/6O+77/nARz7xmS908ZVuvvGdHn7wk1/08ps/9EX5x/+6GxYWFhYW9m9/ARhGyKs=
+  </data>
+ </layer>
+</map>

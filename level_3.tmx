@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="40" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#8291e9" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" source="Kenny.tsx"/>
+ <layer id="1" name="Platforms" width="40" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztlEEKgCAQRcdVULs2lR2k63SUjl6iAyI6o5mJ4IePJIKPNyRAT09PTsbaAC/TKjeV7ak03SuzlAg3s1ZnKsyq5mfPzf0ukRhngj9SNTF8b1wOAKdvP+QM912eUv5CfNzduTwr6DdmYc65fD5vHF/qP63Y5qeTXi+K8St/lE90hUU2LMUYw5cT2xVVxeibd4jv+JGNcikLNpXNdal6A1BbDMM=
+  </data>
+ </layer>
+ <layer id="2" name="Coins" width="40" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztkcENACAIxO6JUziI++/lX0UTgnIk9o2hVODz4aZFCxjJ6n2iwe82tkYnHzZfjdEz0jtLMya0ZowtbzkVwxvGPi+xNFsR0bEG7PRi5y6bOcGM1x9moANr0QP+
+  </data>
+ </layer>
+</map>

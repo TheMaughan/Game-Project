@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="40" height="17" tilewidth="16" tileheight="16" infinite="0" backgroundcolor="#71baaa" nextlayerid="15" nextobjectid="1">
+ <tileset firstgid="1" source="../../Team-Projects/Sprites/NES_MarioTiles.tsx"/>
+ <tileset firstgid="144" source="GloomyTileset.tsx"/>
+ <tileset firstgid="995" source="clouds_background.tsx"/>
+ <tileset firstgid="1471" source="sea_background.tsx"/>
+ <tileset firstgid="1513" source="sky_background.tsx"/>
+ <tileset firstgid="1646" source="far-grounds_background.tsx"/>
+ <tileset firstgid="1874" source="Magic_Cliffs_Complete.tsx"/>
+ <layer id="14" name="Background_back" width="40" height="17">
+  <data encoding="base64" compression="zlib">
+   eJzNyecilgEYgOHXlk0hI9mSVRlZIbvsVdnHr09GmZnXYTw/rj/3ncpKkmP+cMIpR/wmFeD95R8XXHLFGedB3i3/ueOeB665CfKS7CRJI50MMnnUn4K8HHJ5QR75ZJEd5BVRTAmllFFAYZBXTgWVvKaKl7wK8mp5Qx1vqaeamiCviWZaaKWNBhqDvPd00EkX3byjPcj7yCd66aOfHj4EeYMMMcwIowzwOcgbZ4KvTDLFF8aCvFnmmOcb35lmJshbYpkVVlljgcUgb5MtfvCTX6yzEeTtssc+BxyyzU6Q9wyyZ/Fk
+  </data>
+ </layer>
+ <layer id="10" name="Background" width="40" height="17">
+  <data encoding="base64" compression="zlib">
+   eJzN1EODHgYUhtFpkonR2Ghj204a27Zt27Zt27at2m1sWz39AfOtszib+26e1b0eOijoBje5xW3ucJd73OcBD3nEY57wlGc85wUvecVr3vCWd7znAx/5xGeCwgQFfUUoQhOG6yF0BNvCEo7wRCAikYhMFKISja+JTgxiEovYxCEu8YhPAhKSiMQkISnJ+IZvSU4KUpIqTMgdqUlDWtKRngxkJBOZyUJWspGdHOQkF7nJQ17ykZ8CFKQQhSlCUYpRnO8oQUlKUTpARxnKUo7yVKAilahMFapSjerUoCa1qE0d6lKP+jSgIY1oTBOa0ozmtKAlrWhNG9oG6GhHezrQkU50pgtd6UZ3etCTXvSmD33pR38GMJBBDGYIQxnGcEYwklGMZgxjGcf4AB0TmMgkJjOFqUxjOjOYySxmM4e5zGM+C1jIIhazhKUsYzkrWMkqVrOGtaxjPRvYGKBjE5vZwla2sZ0d7GQXu9nDXvaxnwMc5BCHOcJRjnGcE5zkFKc5w1nOcZ4LXOQSlwN0XOEq1/ieH/iRn/iZX/iV3/idP/iTv/ibf/iX69zgJre4zR3uco/7POAhj3jME57yLEDHc17wkle85g1vecd7PvCRT3wmKNj/IhShCUMwYQlHeCIQkUhEJgpRicbXRCcGMYkVHHJHbFsc4hKP+CQgIYlITBKSkoxv+JbkpCAlqUhNGtKSjvRkICOZyEwWspKN7OQgJ7mCQ+7ITR7yko/8FKAghShMEYpSjOJ8RwlKUorSlKEs5ShPBSpSicpUoSrVqE4NalKL2gE66lCXetSnAQ1pRGOa0JRmNKcFLWlFa9rQlna0pwMd6URnutCVbnSnBz3pRW/60DdARz/6M4CBDGIwQxjKMIYzgpGMYjRjGMs4xjOBiUxiMlOYyjSmM4OZzGI2c5jLPOYH6FjAQhaxmCUsZRnLWcFKVrGaNaxlHevZwEY2sZktbGUb29nBTnaxmz3sZR/7OcDBEDr+vx/hKMc4zgkOcfgL2U5zhrOc4zwnOfWFbJe4zBWuco0LXPxCtv8A8PVzxQ==
+  </data>
+ </layer>
+ <layer id="13" name="Background_front" width="40" height="17">
+  <data encoding="base64" compression="zlib">
+   eJzt1dVrlQEcx+GjwsKe3Z1gzu7WuRn/iNid2+xWsLu7E50Lu7sL7O5ufUTEC49453bhFx54+XHg/XBu3kDg//7v3+1caCBwPjS1K4IvW1ggkJ0IcoSlds2PtdTRiihaE00MbWibBhpjNcQRz2CGMJRhDE/lvm3ev50EdpBIEsmksDMN/H+vNLzmDW95x3s+pIG2n6sc/us5MvzPv0sL6/CXvo4hgUAnOtOFrnSjOz3oSS9604e+9KM/AxjIIGKJI57BDGEowxjOCEYyitGMYSzjGM8EJob83jfJbTJTmMo0pjODmcxiNnOYyzzms4CFLGIxS1jKMpazgpWsYjVrWMs61rOBjWxiM1vYGqRvu1sCO0gkiWRS2MkudrOHvexjPwc4yCEOc4SjHOM4JzjJKU5zhrOc4zwXuMglLnOFq0H6rrld5wY3ucVt7nCXe9znAQ95xGOe8JRnPOcFL3nFa97wlne85wMf+cRnvvD1e49vWzrSkyHIdy7ELZQwwslIJjKThaxkIzsR5CAnuchNHvKSj/wUoCCFKEwRilKM4pSgJKUoTRnKUo7yQfoquFWkEpWpQlUiqUZ1alCTWtSmDnWpR30a0JBGNKYJTWlGc1rQklZE0ZpoYmhDW9rRnm/cVozs
+  </data>
+ </layer>
+ <layer id="7" name="Coins" width="40" height="17">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAODHAAqgAAE=
+  </data>
+ </layer>
+ <layer id="6" name="Platforms" width="40" height="17">
+  <data encoding="base64" compression="zlib">
+   eJzt0lkrRGEYwPFXhtnsa7LcoZC1LGkGN9ayJMsdCp8BV9ayZBuu8R3cWcsSZnBhN0iWOxSylu1fFDKHaZpwMU/96qn3PMt5zxHCFrawhS3+Z5wohDjFmeJv5nfJhehGD3qhQx/65a/nwUohQhCqfK8xcraDXexhHwc4xBGO5dbbb55eC9DDgEUsYfltRhl7laPiw35e3KU3fOALP/gjAIEIsvJd29NPBgc4Qg7FNzNyOctDPgpQiCIUowSlJmpXeL9VrGEdG9iUyM9xgcu3O9HQT4sUpCLth/dv5bwN7ehAJ7rRg17oTNQ7qYRwhgtc4QZ3iTwM4YhQvdfX0LMWdWZ8mymemcYMZjGHBehhwKKJHunMykAmspCNHIm8ElWoVn3uMWzmf/PAc494wjPs+A72kMEBjsqvNfXMakAjmtCMFol8AIMYUn3tY07EMz8BiUhCMjTQIgWpJvYbYdYoxjCOCUxK5FvYhtHC/SyJK2Zd4wa3uMO9RO6hFsITXurf2y+SWVGIRgxiEYcXySVlRQ==
+  </data>
+ </layer>
+ <layer id="8" name="Don't Touch" width="40" height="17" locked="1">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAODHAAqgAAE=
+  </data>
+ </layer>
+ <layer id="9" name="Foreground" width="40" height="17">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwUACB2ZUvgszdnXEglx23JgckEqhe4hxF7luGwXDEwAA+xQHvw==
+  </data>
+ </layer>
+</map>

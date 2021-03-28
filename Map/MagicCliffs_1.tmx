@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="1">
+ <tileset firstgid="1" name="Magic_Cliffs" tilewidth="16" tileheight="16" tilecount="1160" columns="58">
+  <image source="Map/Complete_tilesets/Magic_Cliffs.png" width="928" height="320"/>
+ </tileset>
+ <tileset firstgid="1161" name="clouds" tilewidth="16" tileheight="16" tilecount="476" columns="34">
+  <image source="Map/Backgrounds/clouds.png" width="544" height="236"/>
+ </tileset>
+ <tileset firstgid="1637" name="far-grounds" tilewidth="16" tileheight="16" tilecount="228" columns="38">
+  <image source="Map/Backgrounds/far-grounds.png" width="616" height="110"/>
+ </tileset>
+ <tileset firstgid="1865" name="sea" tilewidth="16" tileheight="16" tilecount="42" columns="7">
+  <image source="Map/Backgrounds/sea.png" width="112" height="96"/>
+ </tileset>
+ <tileset firstgid="1907" name="sky" tilewidth="16" tileheight="16" tilecount="133" columns="7">
+  <image source="Map/Backgrounds/sky.png" width="112" height="304"/>
+ </tileset>
+ <tileset firstgid="2040" name="coin" tilewidth="14" tileheight="14" tilecount="4" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="14" height="14" source="../Team-Projects/Sprites/ball/3.png"/>
+   <animation>
+    <frame tileid="0" duration="150"/>
+    <frame tileid="3" duration="150"/>
+    <frame tileid="2" duration="150"/>
+    <frame tileid="1" duration="150"/>
+    <frame tileid="2" duration="150"/>
+    <frame tileid="3" duration="150"/>
+    <frame tileid="0" duration="150"/>
+   </animation>
+  </tile>
+  <tile id="1">
+   <image width="14" height="14" source="../Team-Projects/Sprites/ball/0.png"/>
+  </tile>
+  <tile id="2">
+   <image width="14" height="14" source="../Team-Projects/Sprites/ball/1.png"/>
+  </tile>
+  <tile id="3">
+   <image width="14" height="14" source="../Team-Projects/Sprites/ball/2.png"/>
+  </tile>
+ </tileset>
+ <layer id="3" name="Background" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzV1WVwVFcYBuAN2WQhuLu2uHuw4u5uwd29aIVSd3d3V+reQoEqbYG21B2t4tpnJ+xkSQjBJjP98cw9c79zTt7v3nM3s0KBwGzmcCZzmcd8Zv2PasdiafDY52Zkhb1WsuoE9jxSjkhvC45ijXVrWRc8/P764NHXpWeDdRvZxGa2HOM+R8ux0HURi49gm/p2drCTXexmD3vZx/7gkdeGBeMCgTji41LuZTNOIDs5yEmuuPT3OJ4cS8y9OJWC9i5EYYpQlGIUpwQlKUVpylCWcnEp68sbV6AilahMFapSjerUoCa14tL+/RPNcVUoWX3jBjQkkUY0pglNacYZNKcFLWlFa9oc2qeda3s60JFOdKYLXelGd3rQk170jspwMjlutLafa38GMJBBDCaJIQxlGMMZwUhGMZoxjGUc45nARCYxmSlMZRrTmcFMZjGbOYcynGyOucxjPgtYyCLO4mzO4VwWcx5LOJ8LuJCLwmeDS7iUy7icK7gy/Ky5mmu4luu4nhvC+bmJm09Bjlu4ldu4nTu4k7u4m3u4l/u4nwd4kId4mEd4lMd4nCd4kqd4mmd4ludYyvO8wIu8xMu8cgpyvMprvM4bvMlbvM07vMsylvMeK1jJKt7nAz7kIz7mE1bzKZ/xOWtYyzq+4Eu+Yj1f8006ORKCGecIzwnn+Jbv+J4f+JGf+Jlf+JXf+J0NbGQTm9nCVv7gT/7ib/7hX7axnR3sZBe72cNe9rGfA+nkaCNj22Da57c1S0qOhENzDhoH4gOBGLIQS5A44gmRlWwkkJ0c5CQXuclDXvKRnwIUpBCFKUJRilGcEpSkFKUpE59+jnKxaZ9fxdjkHOEeIn2UDc/lNE6nPBWoSCUqU4WqVKM6NahJLWpTh7rUoz4NaEgijWhME5rSjDNoTgta0io+bY5IxqTYtM9vRGxyrU1UH63db0Nb2tGeDnSkE53pQle60Z0e9KQXvelDX/rRnwEMZBCDSWIIQxnG8HAWRjKK0fEpOcLvf0uWQIvImYpoR3s6BJPPVaSHSB8d/W53ojNd6Eo3uocyv5YQlS3Sx+rY5HHEMsdveeDwOWE9rO9JL3rTh77h/0mhzK2lztU2VU8RB/RwMJAyN/I++ttjAAMZxGCSGBLK3FrqHqJF95EY45uLSdv3UHsMYzgjGMkoRocytxb9zaaWEHWdqYdZMWnfxxh7jGUc45nARCaFjr8WIivZwueE7OQgJ7nITR7yko/8FKBgqnMV/Z1EZz1SPVKbbI8pTGUa05nBzFDGtcpUoSrVqE4NalKL2tShLvWoTwMakkgjGtMkg3OVEEz/e4nM+Q9UuLIr
+  </data>
+ </layer>
+ <layer id="10" name="Don't Touch" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAoGF+BjZGDgB2IBIBZkHGjXkA88gG73BGIvIPYewv4YBaOAVFAOxBVAXDnQDqEQbATiTUC8eaAdQiF4DcRvgPgtmvhlYLl0BYivAvE1AmXUVyYaOY4EoAp0oxoQq6O5lRfoNj4g5gdiAag7uYBquIGYB02tPjN93IoP+JPgBheg+12B2A3NH5mDwB+dVHDD4kHgj8NUcMNdKvoDABZGEXE=
+  </data>
+ </layer>
+ <layer id="6" name="Platforms" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt1MlL1GEYB/DfjFlQoQZ2qnProfVYZistVP+CbYc2qItLu+2LRdmtOhRphl5MbbU9qCiFCjVI2jxGWR1aT32GfuIwGpMGSTFf+MDMM8/ved+Xd2aCIJVUUkkllf8lTTTTwtM+3sufJCMSBJlkMSTS17vpfeba+zzms+AfPkcqfy9TyWEauUxnBjP7cE+9SQGFFLGBjWxicw9mFEeDYDs72MkuDqsfoZQy78up4CyVVLHfZwco4VDY25ucNOsUNV7XUsd5LnCRY37TxzmR5Lddb8ZVrnGdGzxQf0gDjWHfa/W2aPcz7oe9PUlJWhAc5JmZrbxVe0c77/nAR5rsv5mW8ByPeMyThHmfzPjMF77yjX6eSac/A8Lnh1lzeFr3e4qGvYn3ujvu3EejwbZSOt7fNese2QxlhOdHMorRjGEsGWZkkhXOGqg2iMEJ9zPOjPFMYCKTyNEzjVym/8Z/9ZSwN/Feb/JMvZVGZ2igSa2Z9H5B3if1RdZbTJ7XS1jKMpazIna26E8dmaU2mzkJ+1ppxipWs4a1FOpZmNa5RrLk698Q6Xqv38lmKOvMWU8+BbE1KGIv+9I69/sr8dlira1sozj2PeC0GWWUc4aK8Bx74tZIlmr9dZGu9zqZtlAlVVRzjhpquc2dHp7jkrUuc4X62PeA52a84CWveB1bQ/1W3BrJ8kZ/Oz8A06yBgg==
+  </data>
+ </layer>
+ <layer id="9" name="Coins" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALKwQ/2gXYBbcFw9x8+MJL9PgoGFyAmLcLU0CLdEjJzJOcVUv2Orn4kh90oGAWkgNG8MvwBAJI7C/U=
+  </data>
+ </layer>
+ <layer id="8" name="Foreground" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJy91kVsFFEYwPE3s7stCe4lSEmQcEKKBQiwQCDLBUiAI3LCNcgBOOAEKVKcFmiLFWmxoKVGseCWIHWBFijuzn86s+nb7ezCFNgv+XV39tn3zXuz3aV2IZZhOVYgHCuxCquxBhFYi3VYjw3YiE3YjC2IRBS2Yhu2IxoxiMUO7MQu7MYexGEv9mGpSR5dVCG6ohtcXFc30d+wHwcQjwQcxCEcxhEchRbHeD2OEziJUziNRJxBEpKRglSk4SzScQ7nccGYyx2Xub6Cqz7ymEb+01Xz/N1cRh3XcB03cBO3cBt3vNa8x/V9PMBDZCATWchGDnKRh3wUoBCP8BhFXvO54zmfv/DKw3sfvJnV8RKv8Bpv8NbHembxg74/tf4OIRSosDk8+wRzXclhOrw0qtNWw+GZh7wP7jzNzpPcXpM5aqE26vhZ73fRjLHNKzC+HWPCHHoeWoQowtkALilPl93zWdDeP6RvBjKF/ll7xnf4i/zd0Zc5+lVgnsGMGeLQz4L2PGYL4cwR5evQcn3KHj1DSxv3XBGiLuopetvQf1CDlZiLeZiPBViImQ49jyWitA5BHcJlL3+uhpF/C5texwDyH4hBRh2BjtNIxBkkIRkpSEWaKD1XgnPlUUeakest8h+BkbayM+auc44a2Dre4T0+4CM+4TO+4Cu+IVwx/25qRv5VeL1r8/y+ok6nkzp6oXeA6mlNjm3QFu0QhvbogI7ohIu4pJh/55rR9mMW+c9WA7cvY8hvLMZhPCZgIiZhMqYo+n6sVMrGPFHLnvESI8902s9JfYrVsn6BiFjW3oGd2IXd2IM47MU+aT84L021Mdp5ai4941p8p/2HVAfPfbS7n5Xojh7oCSd6oTf6/GZcJmtnIRs5yEUe8qWcwhXPMZXt+nNRFdV8fDcVoBDDLdZR0ajHvtdHCOZhPhpiIRZJZyLa4vloTO1NsMlCHdoaMX7W2cJ8kYgy7uuMIP5HBJXvl+hnjizaspGDPESQX7rUfh4XpGt+y6R6zzGK9Ucrvq+1yLBwvyKpIcqkDn9Rn7xD0AAN0Qih0r3+qf2RctL2dYG0r4sRTXsM1qpibgTc138aSeScjBSkIs2oId1iLd7RWcqhC++7+slptlL608Fy5JJjHvJRgEI8wmMUoRhP8BTPUILnFuuaKuU9jffTLdxbX6EG8xsddjgQFPz3c/qLJswfigPkHm9I+Ad1tPrPefuLIkVXLNXxCxfr890=
+  </data>
+ </layer>
+</map>
