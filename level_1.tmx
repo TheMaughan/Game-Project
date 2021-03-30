@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#000000" nextlayerid="10" nextobjectid="13">
+<map version="1.5" tiledversion="1.5.0" orientation="orthogonal" renderorder="right-down" width="50" height="20" tilewidth="128" tileheight="128" infinite="0" backgroundcolor="#000000" nextlayerid="11" nextobjectid="13">
  <tileset firstgid="1" source="Kenny.tsx"/>
  <tileset firstgid="146" name="Checkpoint" tilewidth="128" tileheight="128" tilecount="9" columns="0">
   <grid orientation="orthogonal" width="1" height="1"/>
@@ -201,7 +201,7 @@
  </layer>
  <layer id="5" name="Platforms" width="50" height="20">
   <data encoding="base64" compression="zlib">
-   eJztln0LgjAQh++DFZiUi16+UARa2h99627I4Bxb286zGeyBBxR03o+dpwCFQqHA5wjQqVF9POGQo6BI5tS2Qy8OrwJ1rZETWpPzBlXMtb71y5LoDHuhtTZC66RiMmwzPV8CmmFujjXsg0SOX3OGcV7ZGf4thzS5+ikHuod1D9SB6+7o22O7ZIERpM7Dm0dDjw7oy3O/+Wcw749LFSH97nHmYSgHJZSJwp0D3HmYkiMFWodvn1xy56Fd/wOgsnM8rfOYffkAyXcyGg==
+   eJztlusKwjAMhfNgCjrUipcXEsH7D9/ahFHIymqbLLMT+sGBFrY0h6ZpASqVSkXPFuDqWtG4w7pEQpkMyW2JOvToaJDXFNmhGjbfoJwy1rd6GRPysDKKNTOKI8V7mBda3wLuYaiPKeyDhY9fs4e2X4Ue/s2HNaXqqQRUw1QDTeK7M+od0WXMBDOQ9sNTRJ4H6ol6Rf73bwZ/fricQPze0/TDlA9OyhNHe/61/VDiQwKt3/c+S0nbD8P8bwCL0Mc9mOfsywcNOzG0
   </data>
  </layer>
  <objectgroup id="8" name="Moving Platforms">
@@ -227,6 +227,11 @@
    </properties>
   </object>
  </objectgroup>
+ <layer id="10" name="Dynamic Items" width="50" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztzjENADAMBLHwp9CGax5A9wy1pduvCgAAeOl00t0eAb4wLNwB1Q==
+  </data>
+ </layer>
  <layer id="9" name="Ladders" width="50" height="20">
   <data encoding="base64" compression="zlib">
    eJztz0ENACAMBMFaAv/isMCjpBcyo2C3CgDu7OmAJms6oImPLD6y+Mjyywe8dgDyjgG7

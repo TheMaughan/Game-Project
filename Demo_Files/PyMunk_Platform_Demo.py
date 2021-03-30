@@ -250,7 +250,7 @@ class GameWindow(arcade.Window):
         self.bullet_list = arcade.SpriteList()
 
         # Read in the tiled map
-        map_name = f":resources:tmx_maps/map_with_ladders.tmx"
+        map_name = "level_1.tmx"
         my_map = arcade.tilemap.read_tmx(map_name)
 
         # Read in the map layers
@@ -507,6 +507,26 @@ class GameWindow(arcade.Window):
             # pixels per frame, we need to convert.
             velocity = (moving_sprite.change_x * 1 / delta_time, moving_sprite.change_y * 1 / delta_time)
             self.physics_engine.set_velocity(moving_sprite, velocity)
+
+        # ------> Player Death Event <------ #
+        changed_viewport = False # - Setting the View to the Game, for now...
+        # - Did the Player Die?
+        if (self.player.center_y < -100) or (arcade.check_for_collision_with_list(self.player,
+                                                                                self.dont_touch_list)): #- Restart Position:
+            #self.setup(self.level) # Restart Game at new Level
+
+            # Move items in the physics engine
+            self.physics_engine.step()
+
+            self.player_list.append(self.player)
+            self.player_sprite.center_x = PLAYER_START_X
+            self.player_sprite.center_y = PLAYER_START_Y
+
+            # Reset View
+            self.view_left = 0
+            self.view_bottom = 0
+            changed_viewport = True
+            #arcade.play_sound(self.game_over)
 
     def on_draw(self):
         """ Draw everything """
