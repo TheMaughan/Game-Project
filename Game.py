@@ -244,7 +244,7 @@ class MyGame(arcade.Window):
         # Create the physics engine
         self.physics_engine = arcade.PymunkPhysicsEngine(damping=damping,
                                                          gravity=gravity)
-# Add the player.
+        # Add the player.
         # For the player, we set the damping to a lower value, which increases
         # the damping rate. This prevents the character from traveling too far
         # after the player lets off the movement keys.
@@ -324,12 +324,12 @@ class MyGame(arcade.Window):
     def on_update(self, delta_time):
         """ Movement and game logic """
         
-         # -------------------- Manage Player Movement -------------------- #
+        # -------------------- Manage Player Movement -------------------- #
         is_on_ground = self.physics_engine.is_on_ground(self.player)
         # Update player forces based on keys pressed
         if self.left_pressed and not self.right_pressed:
             # Create a force to the left. Apply it.
-            if is_on_ground or self.player.is_on_ladder:
+            if is_on_ground:
                 force = (-PLAYER_MOVE_FORCE_ON_GROUND, 0)
             else:
                 force = (-PLAYER_MOVE_FORCE_IN_AIR, 0)
@@ -338,13 +338,17 @@ class MyGame(arcade.Window):
             self.physics_engine.set_friction(self.player, 0)
         elif self.right_pressed and not self.left_pressed:
             # Create a force to the right. Apply it.
-            if is_on_ground or self.player.is_on_ladder:
+            if is_on_ground:
                 force = (PLAYER_MOVE_FORCE_ON_GROUND, 0)
             else:
                 force = (PLAYER_MOVE_FORCE_IN_AIR, 0)
             self.physics_engine.apply_force(self.player, force)
             # Set friction to zero for the player while moving
             self.physics_engine.set_friction(self.player, 0)
+        else:
+            # Player's feet are not moving. Therefore up the friction so we stop.
+            self.physics_engine.set_friction(self.player, 1.0)
+        """
         elif self.up_pressed and not self.down_pressed:
             # Create a force to the right. Apply it.
             if self.player.is_on_ladder:
@@ -359,10 +363,8 @@ class MyGame(arcade.Window):
                 self.physics_engine.apply_force(self.player, force)
                 # Set friction to zero for the player while moving
                 self.physics_engine.set_friction(self.player, 0)
-
-        else:
-            # Player's feet are not moving. Therefore up the friction so we stop.
-            self.physics_engine.set_friction(self.player, 1.0)
+        """
+        
 
         # Move items in the physics engine
         self.physics_engine.step()
@@ -424,7 +426,8 @@ class MyGame(arcade.Window):
         # - Did the Player Die?
         if (self.player.center_y < -100) or (arcade.check_for_collision_with_list(self.player,
                                                                                 self.dont_touch_list)): #- Restart Position:
-            self.setup(self.level) # Restart Game at new Level
+            self.physics_engine.player
+            #self.setup(self.level) # Restart Game at new Level
             # Reset View
             self.view_left = 0
             self.view_bottom = 0
