@@ -189,9 +189,11 @@
   </tile>
  </tileset>
  <tileset firstgid="188" source="../Team-Projects/Sprites/1bit-monochrome_tilemap_transparent.tsx"/>
+ <tileset firstgid="588" source="items.tsx"/>
+ <tileset firstgid="609" source="enemies.tsx"/>
  <layer id="1" name="Background" width="50" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMApGwSgYBaNgFBACfmTo8ae6K4YmIDXsrGniilEwCgiDeQwMDRVAmhCmFQAAsFIGfQ==
+   eJzt0LEJACAMBdGPa7mDzqKVpZM4q24gBoMI9yCkChyRAAAAAOwkw02+XvGn099Fl4o/lfC6wKYG9dcNFkPqbe3deJm3HAfk
   </data>
  </layer>
  <layer id="4" name="Coins" width="50" height="20">
@@ -229,7 +231,7 @@
  </objectgroup>
  <layer id="10" name="Dynamic Items" width="50" height="20">
   <data encoding="base64" compression="zlib">
-   eJztzjENADAMBLHwp9CGax5A9wy1pduvCgAAeOl00t0eAb4wLNwB1Q==
+   eJzt0UEKgEAMA8C6+yi/ouhhD4If8qb+1RQKC14EQSSagdBrQs1ERORNQ6phNqYaZv6HgnQf2LEY/44e/X0C+44SOybyHV5/ji3MMtLGvbIjK7I92uge/0Nj3P/w7vl0Rf7sADYGCKY=
   </data>
  </layer>
  <layer id="9" name="Ladders" width="50" height="20">

@@ -87,6 +87,8 @@ class MyGame(arcade.Window):
         self.jump_needs_reset: bool = False
 
         # Made in the Tiled Mapmaker:
+        # I don't know exactly what 'Optional' does, I assume that it helps with processing the game and
+            # helps with writing less code.
         self.wall_list: Optional[arcade.SpriteList] = None
         self.coin_list: Optional[arcade.SpriteList] = None
         self.ladder_list: Optional[arcade.SpriteList] = None
@@ -94,11 +96,11 @@ class MyGame(arcade.Window):
         self.background_list: Optional[arcade.SpriteList] = None
         self.dont_touch_list: Optional[arcade.SpriteList] = None
 
+        # Non-animated Objects that the physics engine controlls.
         self.item_list: Optional[arcade.SpriteList] = None
 
         # The Player's avatar:
         self.player_list: Optional[arcade.SpriteList] = None
-        #self.player = None
         self.player: Optional[Player] = None
         
         #The world Physics:
@@ -127,12 +129,23 @@ class MyGame(arcade.Window):
         self.view_bottom = 0
         self.view_left = 0
 
-        # Player Prograssion:
-        self.score = 0        
+        # Player Progression:
+        self.score = 0
 
+        # ------ Player Setup ------ #
+        # Create player sprite
+        self.player = Player(hit_box_algorithm="Detailed")
         # Create the Sprite lists
         self.player_list = arcade.SpriteList()
-        self.bullet_list = arcade.SpriteList()
+        #P_sprite = "./images/mario/mario"
+        #self.player = arcade.Sprite(f"{P_sprite}_idle.png", CHARACTER_SCALING)
+         # Set player location
+        grid_x = 1
+        grid_y = 1
+        self.player.center_x = SPRITE_SIZE * grid_x + SPRITE_SIZE / 2
+        self.player.center_y = SPRITE_SIZE * grid_y + SPRITE_SIZE / 2
+        # Add to player sprite list
+        self.player_list.append(self.player)
         
         #self.foreground_list = arcade.SpriteList()
         #self.background_list = arcade.SpriteList()
@@ -185,8 +198,8 @@ class MyGame(arcade.Window):
                                                                 moving_platforms_layer_name,
                                                                 SPRITE_SCALING_TILES,
                                                                 hit_box_algorithm="Detailed")
-        #for sprite in self.moving_sprites_list:
-            #self.wall_list.append(sprite)
+        for sprite in self.moving_sprites_list:
+            self.wall_list.append(sprite) #- The wall object list also owns moving platforms
                                                       
         # Background Layers:
         self.background_list = arcade.tilemap.process_layer(my_map,
@@ -223,19 +236,6 @@ class MyGame(arcade.Window):
         if my_map.background_color:
             arcade.set_background_color(my_map.background_color)
         # ^^^^^^^^^^^^^^^^^^^ End of Map Code ^^^^^^^^^^^^^^^^^^^ #
-
-        # ------ Player Setup ------ #
-        # Create player sprite
-        self.player = Player(self.ladder_list, hit_box_algorithm="Detailed")
-        #P_sprite = "./images/mario/mario"
-        #self.player = arcade.Sprite(f"{P_sprite}_idle.png", CHARACTER_SCALING)
-         # Set player location
-        grid_x = 1
-        grid_y = 1
-        self.player.center_x = SPRITE_SIZE * grid_x + SPRITE_SIZE / 2
-        self.player.center_y = SPRITE_SIZE * grid_y + SPRITE_SIZE / 2
-        # Add to player sprite list
-        self.player_list.append(self.player)
 
         # --------- Physics Engine & Logic --------- #
         damping = DEFAULT_DAMPING
@@ -295,12 +295,14 @@ class MyGame(arcade.Window):
                 self.physics_engine.apply_impulse(self.player, impulse)
                 arcade.play_sound(self.jump_sound)
 
+        #Down key doesn't do anything yet
         elif key == arcade.key.DOWN or key == arcade.key.S:
             self.down_pressed = True
 
-
+        # Move left & right triggers
         elif key == arcade.key.LEFT or key == arcade.key.A:
             self.left_pressed = True
+            # The right button doesn't always work, I don't know why yet.
         elif key == arcade.key.RIGHT or key == arcade.key.D:
             self.right_pressed = True
 
@@ -378,30 +380,23 @@ class MyGame(arcade.Window):
         self.coin_list.update_animation(delta_time)
         self.background_list.update_animation(delta_time)
         self.foreground_list.update_animation(delta_time)
+        self.item_list.update_animation(delta_time)
 
         # ----- Moving Platform Logic ----- #
         #update moving platforms:
         self.wall_list.update()
         # See if the moving wall hit a boundary and needs to reverse direction.
-       # For each moving sprite, see if we've reached a boundary and need to
-        # reverse course.
-        for moving_sprite in self.moving_sprites_list:
-            if moving_sprite.boundary_right and \
-                    moving_sprite.change_x > 0 and \
-                    moving_sprite.right > moving_sprite.boundary_right:
-                moving_sprite.change_x *= -1
-            elif moving_sprite.boundary_left and \
-                    moving_sprite.change_x < 0 and \
-                    moving_sprite.left > moving_sprite.boundary_left:
-                moving_sprite.change_x *= -1
-            if moving_sprite.boundary_top and \
-                    moving_sprite.change_y > 0 and \
-                    moving_sprite.top > moving_sprite.boundary_top:
-                moving_sprite.change_y *= -1
-            elif moving_sprite.boundary_bottom and \
-                    moving_sprite.change_y < 0 and \
-                    moving_sprite.bottom < moving_sprite.boundary_bottom:
-                moving_sprite.change_y *= -1
+        # This is a bit buggy right now...
+        for wall in self.wall_list:
+
+            if wall.boundary_right and wall.right > wall.boundary_right and wall.change_x > 0:
+                wall.change_x *= -1
+            if wall.boundary_left and wall.left < wall.boundary_left and wall.change_x < 0:
+                wall.change_x *= -1
+            if wall.boundary_top and wall.top > wall.boundary_top and wall.change_y > 0:
+                wall.change_y *= -1
+            if wall.boundary_bottom and wall.bottom < wall.boundary_bottom and wall.change_y < 0:
+                wall.change_y *= -1
 
         
         # ----- Coin Logic: ----- #
@@ -412,6 +407,7 @@ class MyGame(arcade.Window):
             #- Different coin objects have different values
             #- Set the coin object values in the map editor
             if 'Points' not in coin.properties:
+                #- This is to remind me to set points to different coin objects
                 print("Warning, collected a coin without a Points property.")
             else:
                 points = int(coin.properties['Points'])
@@ -419,6 +415,7 @@ class MyGame(arcade.Window):
             
             coin.remove_from_sprite_lists()
             arcade.play_sound(self.collect_coin_sound)
+            #Points are now added using values set within the Tiled editor
             #self.score += 1
         
         # ------> Player Death Event <------ #
@@ -426,8 +423,18 @@ class MyGame(arcade.Window):
         # - Did the Player Die?
         if (self.player.center_y < -100) or (arcade.check_for_collision_with_list(self.player,
                                                                                 self.dont_touch_list)): #- Restart Position:
-            self.physics_engine.player
-            #self.setup(self.level) # Restart Game at new Level
+            #self.physics_engine.player #- Physics engine ownes the player sprite, but I don't know how gain access to the 
+            #      player sprite yet...
+            self.setup(self.level) # this Restarts the Game, which is annoying
+
+            #- The below code makes an infinate loop that is caused by the physics engine,
+                #- the game engine and game class both battle eachother trying to draw the sprite and
+                    # claim ownership of the sprite's location.
+            #self.player.center_x = 0
+            #self.player.center_y = 0
+            #self.player.center_x = PLAYER_START_X
+            #self.player.center_y = PLAYER_START_Y
+
             # Reset View
             self.view_left = 0
             self.view_bottom = 0
@@ -436,19 +443,16 @@ class MyGame(arcade.Window):
         
 
         # ------> Player Win Event <------ #
+        # This doesn't work right now, I assume that this is because the physics engine is tracking the sprite
+        #       and not the game class. I'm working on a solution.
         if self.player.center_x >= self.end_of_map:
             self.level += 1 # Advance a level
-            self.setup(self.level) # Restart Game at new Level
+            self.setup(self.level) # Restart/load Game at new Level
             # Reset the Viewport
             self.view_left = 0
             self.view_bottom = 0
             changed_viewport = True
         
-
-
-
-
-
         # -------------------- Manage Scrolling -------------------- #
 
         # Track if we need to change the viewport
