@@ -58,7 +58,6 @@ class Player(arcade.Sprite):
         # Track our state
         self.jumping = False
         self.climbing = False
-        self.is_on_ladder = False
 
         main_path = f"images/mario/mario"
 
@@ -72,7 +71,7 @@ class Player(arcade.Sprite):
             self.walk_textures.append(texture)
         
         # Set the initial texture
-        self.texture = self.idle_texture_pair[0]
+        self.texture = self.idle_texture_pair[self.character_face_direction]
 
         #self.points = [[-22, -64], [22, -64], [22, 28], [-22, 28]]
         self.points = [[-16, -40], [16, -40], [16, 28], [-16, 28]]
@@ -80,37 +79,6 @@ class Player(arcade.Sprite):
 
         #distance traveled since changed texture
         #self.x_odometer = 0
-
-    def pymunk_moved(self, physics_engine, dx, dy):
-        
-        if dx < -DEAD_ZONE and self.character_face_direction == RIGHT_FACING:
-            self.character_face_direction = LEFT_FACING
-        elif dx > DEAD_ZONE and self.character_face_direction == LEFT_FACING:
-            self.character_face_direction = RIGHT_FACING
-
-        is_on_ground = physics_engine.is_on_ground(self)
-
-        self.x_odometer += dx
-
-        if not is_on_ground:
-            if dy > DEAD_ZONE:
-                self.texture = self.jump_texture_pair[self.character_face_direction]
-                return
-            elif dy < -DEAD_ZONE:
-                self.texture = self.fall_texture_pair[self.character_face_direction]
-                return
-
-        if abs(dx) <= DEAD_ZONE:
-            self.texture = self.idle_texture_pair[self.character_face_direction]
-            return
-
-        if abs(self.x_odometer) > DISTANCE_TO_CHANGE_TEXTURE:
-            self.x_odometer = 0
-
-            self.cur_texture += 1
-            if self.cur_texture > 2:
-                self.cur_texture = 0
-            self.texture = self.walk_textures[self.cur_texture][self.character_face_direction]
 
     def reset_pos(self):
         self.center_x = 100
@@ -155,10 +123,10 @@ class Player(arcade.Sprite):
             self.character_face_direction = RIGHT_FACING
 
         # Jumping animation
-        if self.change_y > 0 and not self.is_on_ladder:
+        if self.change_y > 0:
             self.texture = self.jump_texture_pair[self.character_face_direction]
             return
-        elif self.change_y < 0 and not self.is_on_ladder:
+        elif self.change_y < 0:
             self.texture = self.fall_texture_pair[self.character_face_direction]
             return
 
@@ -167,11 +135,13 @@ class Player(arcade.Sprite):
             self.texture = self.idle_texture_pair[self.character_face_direction]
             return
 
+        
         # Walking animation
         self.cur_texture += 1
         if self.cur_texture > 2: #* UPDATES_PER_FRAME:
             self.cur_texture = 0
         self.texture = self.walk_textures[self.cur_texture][self.character_face_direction]
+        
 
         #frame = self.cur_texture // UPDATES_PER_FRAME
         #direction = self.character_face_direction
